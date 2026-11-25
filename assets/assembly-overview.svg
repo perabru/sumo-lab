@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1020" viewBox="0 0 1200 1020" role="img" aria-labelledby="title desc"><title id="title">Montagem do robô de sumô em camadas</title><desc id="desc">Vista explodida autoral com controladora, ponte H, espaçadores, bateria presa ao centro, chassi, dois motores com rodas, sensores de linha e lâmina frontal.</desc><defs><style>text{font-family:Arial,sans-serif;fill:#302044;font-size:22px}.title{font-size:32px;font-weight:700}.label{font-weight:700}.small{font-size:18px}.leader{fill:none;stroke:#8a6db2;stroke-width:2}</style><linearGradient id="chassis" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#ded4ed"/></linearGradient></defs><rect width="1200" height="1020" rx="24" fill="#fff"/><text x="45" y="58" class="title">A montagem, por camadas</text><text x="45" y="94" class="small">Ilustração de organização • adapte suportes e furos às medidas reais do seu chassi.</text>
+<!-- Alignment lines -->
+<path d="M395 278V678M655 240V640M790 315V715M530 350V750" stroke="#d8c8eb" stroke-dasharray="8 9" stroke-width="2"/>
+<!-- Electronics platform -->
+<path d="m362 245 251-95 208 119-252 95Z" fill="url(#chassis)" stroke="#c8b6e0" stroke-width="2"/><path d="m362 245 207 119v15L362 260Z" fill="#cfc2df"/><path d="m569 364 252-95v15L569 379Z" fill="#e2d8ee"/>
+<!-- Controller board -->
+<path d="m418 228 105-39 92 53-106 41Z" fill="#7436db"/><path d="m418 228 91 55v9l-91-55Z" fill="#512091"/><path d="m465 223 38-14 41 24-39 14Z" fill="#292033"/><path d="m429 231 8 5m6 3 8 5m6 3 8 5m6 3 8 5M529 205l8 5m6 3 8 5m6 3 8 5m6 3 8 5" stroke="#d9c6f0" stroke-width="5"/>
+<!-- Driver -->
+<path d="m642 264 71-27 62 36-71 27Z" fill="#b780d6"/><path d="m664 250 29-11 39 22-29 11Z" fill="#32223f"/><path d="m664 250 39 22v30l-39-22Z" fill="#483452"/><path d="m703 272 29-11v30l-29 11Z" fill="#251d2f"/><path d="m672 247 39 23m-29-27 39 23" stroke="#6c4a80" stroke-width="6"/>
+<path d="M469 229H233V178H54" class="leader"/><circle cx="469" cy="229" r="5" fill="#7436db"/><text x="54" y="151" class="label">Controladora</text><text x="54" y="177" class="small">Uno ou ESP32</text>
+<path d="M730 268H917V191H1145" class="leader"/><circle cx="730" cy="268" r="5" fill="#7436db"/><text x="917" y="154" class="label">Ponte H</text><text x="917" y="180" class="small">Dissipador ventilado</text>
+<!-- Standoffs -->
+<g fill="#c7b8db" stroke="#aa98c4" stroke-width="2"><path d="M387 390h16v72h-16Z"/><ellipse cx="395" cy="390" rx="8" ry="4"/><path d="M647 352h16v72h-16Z"/><ellipse cx="655" cy="352" rx="8" ry="4"/><path d="M782 427h16v72h-16Z"/><ellipse cx="790" cy="427" rx="8" ry="4"/><path d="M522 462h16v72h-16Z"/><ellipse cx="530" cy="462" rx="8" ry="4"/></g>
+<path d="M395 425H237V375H54" class="leader"/><circle cx="395" cy="425" r="5" fill="#7436db"/><text x="54" y="343" class="label">Espaçadores</text><text x="54" y="369" class="small">Placas sem tocar o chassi</text>
+<!-- Battery -->
+<path d="m483 457 122-47 106 60-122 47Z" fill="#51376c"/><path d="m483 457 106 60v48l-106-60Z" fill="#30213e"/><path d="m589 517 122-47v48l-122 47Z" fill="#432c58"/><path d="m526 440 102 58v49l-28 11v-50l-102-57Z" fill="#a78ac4"/><path d="m696 479 22-8 10 9-22 8Z" fill="#13c2e1"/>
+<path d="M704 501H919V440H1145" class="leader"/><circle cx="704" cy="501" r="5" fill="#7436db"/><text x="919" y="401" class="label">Bateria</text><text x="919" y="427" class="small">Presa, baixa e centralizada</text>
+<!-- Chassis -->
+<path d="m335 640 279-105 229 132-279 105Z" fill="url(#chassis)" stroke="#bfaed5" stroke-width="3"/><path d="m335 640 229 132v22L335 662Z" fill="#c8bbd9"/><path d="m564 772 279-105v22L564 794Z" fill="#e6dfee"/><path d="m366 637 247-92 200 116-246 92Z" fill="none" stroke="#06bfdc" stroke-width="4"/>
+<g fill="#8f77ad"><ellipse cx="395" cy="655" rx="8" ry="4"/><ellipse cx="655" cy="617" rx="8" ry="4"/><ellipse cx="790" cy="692" rx="8" ry="4"/><ellipse cx="530" cy="727" rx="8" ry="4"/></g>
+<!-- motors outside plate -->
+<g><path d="m246 604 80-30 64 37-80 30Z" fill="#e7cb65"/><path d="m246 604 64 37v39l-64-37Z" fill="#b19b4c"/><path d="m310 641 80-30v39l-80 30Z" fill="#d1b459"/><path d="m226 629 33-12 23 13-33 13Z" fill="#99a4b1"/><ellipse cx="236" cy="655" rx="45" ry="74" fill="#30243f" transform="rotate(-24 236 655)"/><ellipse cx="236" cy="655" rx="24" ry="44" fill="#663d96" transform="rotate(-24 236 655)"/><ellipse cx="236" cy="655" rx="13" ry="25" fill="#05c7e5" transform="rotate(-24 236 655)"/></g>
+<g><path d="m814 612 80-30 64 37-80 30Z" fill="#e7cb65"/><path d="m814 612 64 37v39l-64-37Z" fill="#b19b4c"/><path d="m878 649 80-30v39l-80 30Z" fill="#d1b459"/><ellipse cx="956" cy="651" rx="45" ry="74" fill="#30243f" transform="rotate(22 956 651)"/><ellipse cx="956" cy="651" rx="24" ry="44" fill="#663d96" transform="rotate(22 956 651)"/><ellipse cx="956" cy="651" rx="13" ry="25" fill="#05c7e5" transform="rotate(22 956 651)"/></g>
+<path d="M308 622H173V543H54" class="leader"/><circle cx="308" cy="622" r="5" fill="#7436db"/><text x="54" y="511" class="label">Motores + rodas</text><text x="54" y="537" class="small">Eixos alinhados</text>
+<!-- front line sensors -->
+<path d="m458 740 35-13 24 14-35 13Z" fill="#7436db"/><path d="m662 726 35-13 24 14-35 13Z" fill="#7436db"/><ellipse cx="483" cy="749" rx="6" ry="4" fill="#1a1932"/><ellipse cx="687" cy="735" rx="6" ry="4" fill="#1a1932"/>
+<!-- blade -->
+<path d="m398 799 166 95 242-92-149-20-121-65Z" fill="url(#chassis)" stroke="#bfaed5" stroke-width="3"/><path d="m398 799 166 95 242-92v14l-242 92-166-95Z" fill="#a89ab9"/><path d="m421 800 144 82 217-83" fill="none" stroke="#07bed8" stroke-width="4"/>
+<path d="M483 749H248V853H54" class="leader"/><circle cx="483" cy="749" r="5" fill="#7436db"/><text x="54" y="819" class="label">Sensores de linha</text><text x="54" y="845" class="small">Voltados para o chão</text>
+<path d="M723 833H919V823H1145" class="leader"/><circle cx="723" cy="833" r="5" fill="#7436db"/><text x="919" y="787" class="label">Lâmina frontal</text><text x="919" y="813" class="small">Sem raspar no tatame</text>
+<rect x="45" y="941" width="1110" height="46" rx="12" fill="#f4eefc"/><text x="66" y="971" class="small">Antes de ligar: confira fixações, centro de gravidade, fios longe das rodas e chave de energia acessível.</text></svg>

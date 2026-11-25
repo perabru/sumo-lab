@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="820" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+<title id="title">Robô de sumô de duas rodas</title><desc id="desc">Ilustração técnica autoral em perspectiva: chassi branco com lâmina frontal, duas rodas, ponte H e sensor ultrassônico.</desc>
+<defs><linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#ece9f7"/></linearGradient><linearGradient id="wedge" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b8b2ce"/></linearGradient><linearGradient id="wheel" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#20172e"/><stop offset=".5" stop-color="#4b3a65"/><stop offset="1" stop-color="#1c1528"/></linearGradient><linearGradient id="board" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7337e7"/><stop offset="1" stop-color="#48218c"/></linearGradient><radialGradient id="halo"><stop stop-color="#07d9f7" stop-opacity=".16"/><stop offset="1" stop-color="#07d9f7" stop-opacity="0"/></radialGradient><filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter><pattern id="grid" width="45" height="26" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .5 -1 .5 550 200)"><path d="M45 0H0V26" fill="none" stroke="#6b46a0" stroke-opacity=".1"/></pattern></defs>
+<ellipse cx="570" cy="460" rx="490" ry="350" fill="url(#halo)"/><path d="M50 430 550 180 1050 430 550 730Z" fill="url(#grid)"/><ellipse cx="556" cy="646" rx="350" ry="63" fill="#332450" opacity=".15" filter="url(#shadow)"/>
+<!-- Left drive wheel, tire and recessed hub -->
+<g transform="translate(242 400) rotate(-27)"><rect x="-49" y="0" width="123" height="190" rx="45" fill="url(#wheel)"/><ellipse cx="8" cy="95" rx="66" ry="98" fill="#271e36" stroke="#4e3d68" stroke-width="5"/><ellipse cx="8" cy="95" rx="40" ry="66" fill="#6940ad"/><ellipse cx="8" cy="95" rx="29" ry="49" fill="#212030" stroke="#07d9f7" stroke-width="6"/><ellipse cx="8" cy="95" rx="9" ry="15" fill="#c8b8e3"/><path d="M-41 35 -22 27M-51 65 -32 57M-53 100 -34 92M-46 135 -27 127M-35 165 -16 157M45 30 63 34M55 64 73 68M57 100 75 104M49 139 67 143M36 168 53 171" stroke="#786588" stroke-width="5"/></g>
+<!-- Chassis sidewalls -->
+<path d="M250 386 558 229 860 388 555 552Z" fill="url(#base)" stroke="#d7d0e9" stroke-width="3"/>
+<path d="M250 386V445L555 611V552Z" fill="#f4f0fa" stroke="#cfc7df" stroke-width="3"/><path d="M555 552 860 388V448L555 611Z" fill="#d8d0e8" stroke="#b3a4cc" stroke-width="3"/>
+<!-- Cyan rim and structural rails -->
+<path d="M270 433 555 587 837 435" fill="none" stroke="#16d7ec" stroke-width="7"/><path d="m303 378 251-129 253 135-251 133Z" fill="#fff" stroke="#e4deef" stroke-width="3"/>
+<!-- battery pack -->
+<path d="m531 283 104 54-94 48-105-53Z" fill="#302340"/><path d="m436 332 105 53v41l-105-54Z" fill="#1e172c"/><path d="m541 385 94-48v41l-94 48Z" fill="#4d385f"/><path d="m462 320 101 53M488 307l101 53" stroke="#7853a6" stroke-width="13"/><path d="m619 351 31 17-15 8-31-17Z" fill="#13d8f0"/>
+<!-- Arduino-like board, no claim of an exact commercial layout -->
+<path d="m372 363 119 62-101 53-119-62Z" fill="url(#board)" stroke="#5d2aab" stroke-width="2"/><path d="m271 416 119 62v14l-119-62Z" fill="#3b1a72"/><path d="m390 478 101-53v14l-101 53Z" fill="#4c218e"/>
+<path d="m367 383 64 33-46 24-63-33Z" fill="#251c35"/><path d="m303 401 18 10-14 8-18-10Zm122 35 18 10-14 8-18-10Z" fill="#bba6dc"/>
+<path d="m317 378 9 5m5 2 9 5m5 2 9 5m5 2 9 5m5 2 9 5m5 2 9 5M326 441l9 5m5 2 9 5m5 2 9 5m5 2 9 5" stroke="#f6e7ff" stroke-width="5"/>
+<path d="m289 405 17 8-22 12-17-9Z" fill="#cad0d9"/><circle cx="418" cy="424" r="4" fill="#0ae9ed"/>
+<!-- Motor driver and heat sink -->
+<path d="m653 383 104 55-88 46-104-54Z" fill="#f4f0fa" stroke="#bcafd5" stroke-width="3"/>
+<path d="m627 380 68 36v38l-68-36Z" fill="#3d2b52"/><path d="m695 416 39-20v37l-39 21Z" fill="#241a33"/>
+<path d="m635 370 68 36v42m-55-49v-22l68 36m-54-29 68 36m-54-29 68 36" fill="none" stroke="#735b8e" stroke-width="7"/>
+<path d="m600 421 24 12-18 10-24-13Zm102 39 24-13 0 13-24 13Z" fill="#04cbeb"/>
+<!-- Board harness -->
+<path d="M475 444q53 41 112-10" fill="none" stroke="#8c54e9" stroke-width="6"/><path d="M467 452q70 48 127-9" fill="none" stroke="#15bed8" stroke-width="5"/><path d="M632 377q-10 25-17 40" fill="none" stroke="#7a3269" stroke-width="5"/>
+<!-- Right wheel -->
+<g transform="translate(816 451) rotate(28)"><rect x="-53" y="-3" width="122" height="190" rx="45" fill="url(#wheel)"/><ellipse cx="38" cy="92" rx="66" ry="98" fill="#271e36" stroke="#4e3d68" stroke-width="5"/><ellipse cx="38" cy="92" rx="42" ry="68" fill="#6940ad"/><ellipse cx="38" cy="92" rx="31" ry="49" fill="#212030" stroke="#07d9f7" stroke-width="6"/><ellipse cx="38" cy="92" rx="9" ry="15" fill="#c8b8e3"/><path d="M-11 30 6 26M-23 62 -5 58M-25 96 -7 92M-19 131 -1 127M-8 163 10 159M77 29 93 34M89 61 105 66M92 96 108 101M86 132 102 137M74 164 90 169" stroke="#786588" stroke-width="5"/></g>
+<!-- Ultrasonic bracket -->
+<path d="m474 448 91 47v-64l-91-47Z" fill="#6a32bf" stroke="#4e1e98" stroke-width="2"/><path d="m565 495 26-14v-64l-26 14Z" fill="#472183"/>
+<g transform="matrix(.87 .47 0 1 488 412)"><circle cx="0" cy="0" r="22" fill="#c9d2dc" stroke="#f7fcff" stroke-width="5"/><circle cx="0" cy="0" r="15" fill="#3b3d52"/><circle cx="0" cy="0" r="9" fill="#191b2d"/><circle cx="59" cy="0" r="22" fill="#c9d2dc" stroke="#f7fcff" stroke-width="5"/><circle cx="59" cy="0" r="15" fill="#3b3d52"/><circle cx="59" cy="0" r="9" fill="#191b2d"/></g>
+<!-- Front blade -->
+<path d="M299 505 555 643 753 537 555 552 359 448Z" fill="url(#wedge)" stroke="#c2b9d3" stroke-width="3"/><path d="m299 505 256 138 198-106v14L555 657 299 520Z" fill="#b9adc9"/><path d="m320 508 235 126 176-94" fill="none" stroke="#fff" stroke-width="5"/><path d="m374 503 181 98 87-47" fill="none" stroke="#7b40cf" stroke-width="5"/>
+<!-- Fasteners -->
+<g fill="#8a7b9e" stroke="#ddd5e8" stroke-width="2"><ellipse cx="555" cy="250" rx="8" ry="4"/><ellipse cx="289" cy="387" rx="8" ry="4"/><ellipse cx="827" cy="390" rx="8" ry="4"/><ellipse cx="357" cy="508" rx="6" ry="3"/><ellipse cx="552" cy="613" rx="6" ry="3"/><ellipse cx="708" cy="540" rx="6" ry="3"/></g>
+</svg>

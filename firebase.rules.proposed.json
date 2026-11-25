@@ -1,0 +1,102 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "sumoLab": {
+      "users": {
+        "$uid": {
+          ".read": "auth !== null && auth.uid === $uid",
+          ".write": "auth !== null && auth.uid === $uid",
+          ".validate": "newData.hasChildren(['schemaVersion', 'profile', 'progress', 'config', 'updatedAt'])",
+          "schemaVersion": {
+            ".validate": "newData.val() === 1"
+          },
+          "profile": {
+            ".validate": "newData.hasChildren(['name', 'robotName'])",
+            "name": {
+              ".validate": "newData.isString() && newData.val().length <= 100"
+            },
+            "robotName": {
+              ".validate": "newData.isString() && newData.val().length <= 60"
+            },
+            "$other": {
+              ".validate": false
+            }
+          },
+          "progress": {
+            ".validate": "newData.hasChildren(['quizScore', 'assemblyChecked'])",
+            "completed": {
+              "$lesson": {
+                ".validate": "$lesson.matches(/^[a-zA-Z0-9_-]{1,64}$/) && newData.isBoolean() && newData.val() === true"
+              }
+            },
+            "quizScore": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+            },
+            "assemblyChecked": {
+              ".validate": "newData.isBoolean()"
+            },
+            "$other": {
+              ".validate": false
+            }
+          },
+          "config": {
+            ".validate": "newData.hasChildren(['board', 'mode', 'attack', 'search', 'escape', 'distance', 'edgeLevel', 'invertLeft', 'invertRight', 'startDelay', 'escapeMs', 'turnMs'])",
+            "board": {
+              ".validate": "newData.val() === 'uno' || newData.val() === 'esp32'"
+            },
+            "attack": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 255"
+            },
+            "search": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 255"
+            },
+            "escape": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 255"
+            },
+            "distance": {
+              ".validate": "newData.isNumber() && newData.val() >= 5 && newData.val() <= 100"
+            },
+            "edgeLevel": {
+              ".validate": "newData.val() === 'LOW' || newData.val() === 'HIGH'"
+            },
+            "invertLeft": {
+              ".validate": "newData.isBoolean()"
+            },
+            "invertRight": {
+              ".validate": "newData.isBoolean()"
+            },
+            "startDelay": {
+              ".validate": "newData.isNumber() && newData.val() >= 3000 && newData.val() <= 10000"
+            },
+            "escapeMs": {
+              ".validate": "newData.isNumber() && newData.val() >= 100 && newData.val() <= 1000"
+            },
+            "turnMs": {
+              ".validate": "newData.isNumber() && newData.val() >= 100 && newData.val() <= 1000"
+            },
+            "$other": {
+              ".validate": false
+            },
+            "mode": {
+              ".validate": "newData.val() === 'autonomous' || newData.val() === 'bench'"
+            }
+          },
+          "updatedAt": {
+            ".validate": "newData.isNumber() && newData.val() <= now && newData.val() > 0"
+          },
+          "$other": {
+            ".validate": false
+          }
+        }
+      },
+      "$other": {
+        ".validate": false
+      }
+    },
+    "$otherApp": {
+      ".read": "$otherApp !== 'sumoLab'",
+      ".write": "$otherApp !== 'sumoLab'"
+    }
+  }
+}
