@@ -23,7 +23,7 @@ Para as verificações locais: `npm test` (Node22+).
 
 Leia [firebase-setup.md](firebase-setup.md). A configuração web fornecida não é uma credencial administrativa. Os provedores Google e e-mail/senha e o domínio `perabru.github.io` foram conferidos no console.
 
-O banco existente foi encontrado com leitura/escrita públicas na raiz. A sincronização permanece protegida por `CLOUD_SYNC_ENABLED` em `auth.js` até aprovação e aplicação das regras. `firebase.rules.proposed.json` restringe o namespace `sumoLab/users/$uid` e preserva o acesso anterior aos outros caminhos. Acesso direto à raiz deixa de funcionar; revise integrações existentes antes de publicar as regras. `firebase.rules.fragment.json` é apenas um fragmento para integração, nunca uma substituição automática das regras de outros apps.
+As regras individuais foram publicadas com autorização do responsável em25/11/2026, e a sincronização está habilitada. `firebase.rules.proposed.json` registra as regras aplicadas: `sumoLab/users/$uid` exige a identidade do próprio aluno; outros caminhos mantêm o acesso anterior. A leitura e escrita diretas na raiz agora são negadas. `firebase.rules.fragment.json` é apenas um fragmento de referência. O acesso anônimo ao namespace dos alunos foi verificado e negado.
 
 As regras são controle de acesso, não atestado independente de conclusão. O certificado é gerado no navegador, baseado em atividades autodeclaradas; não há assinatura digital ou validação externa.
 

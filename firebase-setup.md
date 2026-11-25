@@ -1,3 +1,5 @@
+> Estado em25/11/2026: Google, e-mail/senha e perabru.github.io conferidos; regras propostas aprovadas pelo proprietário e publicadas. Sincronização habilitada. Acesso anônimo ao namespace sumoLab negado.
+
 # Firebase do Sumô Lab
 
 Projeto: `controle-de-leito`. O site usa a configuração web fornecida pelo proprietário e o SDK modular 13.4.0. A versão foi conferida na documentação oficial e no CDN em 25/11/2026. A configuração web identifica o projeto; ela não concede permissão administrativa.

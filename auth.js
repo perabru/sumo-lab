@@ -10,8 +10,8 @@ export const firebaseConfig = Object.freeze({
   appId: '1:534040143959:web:fa66003cce0e84b4d79b12'
 });
 
-// Enable only after the proposed per-student rules are published.
-export const CLOUD_SYNC_ENABLED = false;
+// Per-student rules published after owner approval on 2026-11-25.
+export const CLOUD_SYNC_ENABLED = true;
 const SDK = 'https://www.gstatic.com/firebasejs/13.4.0/';
 const listeners = new Set();
 let session = null;
