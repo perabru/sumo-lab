@@ -46,3 +46,9 @@ O verificador usa as medidas editáveis das peças, rotação, folga, altura dis
 STLs externos são abertos localmente e exigem que o aluno informe uma área plana útil. O sistema não deduz essa área a partir da caixa externa nem reconhece obstáculos da malha. Formato esperado: milímetros, base horizontal voltada para cima, até16MB e80mil triângulos.
 
 Testes geométricos verificam limites, superfície fechada, furos, rampa, colisões, rotações, entradas inválidas e preservação de medidas na organização.
+
+## Roteiro de montagem
+
+A navegação inicial apresenta seis etapas: peças, base, ligações, código, testes e conclusão. As nove aulas originais mantêm seus IDs e o progresso já salvo. Cada parte mostra objetivo, ações, cuidado essencial, resultado e conferência; explicações adicionais ficam em painéis expansíveis.
+
+A escolha de Uno/ESP32 acompanha os desenhos e códigos. O primeiro programa é o teste de bancada. As ferramentas retornam à parte de origem. A conclusão e a troca de placa aguardam o carregamento dos dados da conta para evitar sobrescrever progresso remoto.

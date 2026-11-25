@@ -12,7 +12,7 @@ const STYLE = `
 .fitlab .fit-legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:13px}.fitlab .fit-legend span:before{content:'';display:inline-block;width:10px;height:10px;border-radius:3px;background:#a189d7;margin-right:6px}.fitlab .fit-legend span:last-child:before{background:#69d4df;border:1px dashed #058799}
 .fitlab .fit-options{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin:8px 0 18px}.fitlab .fit-choice{display:flex;align-items:center;gap:8px;line-height:1.35;cursor:pointer;min-height:30px}.fitlab input[type=checkbox],.fitlab input[type=radio]{accent-color:var(--fit-purple);width:17px;height:17px;margin:0;flex-shrink:0}
 .fitlab .fit-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fitlab .fit-fields .fit-wide{grid-column:1/-1}.fitlab label.fit-field{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:600}.fitlab input[type=number],.fitlab select{width:100%;min-height:42px;padding:8px 10px;border:1px solid #d8d0e4;border-radius:9px;background:#fff;font:inherit;color:inherit}.fitlab input:focus-visible,.fitlab select:focus-visible{outline:3px solid #c6f2f8;outline-offset:1px;border-color:#00a9bf}.fitlab select{appearance:auto}
-.fitlab .fit-separator{border:0;border-top:1px solid var(--fit-line);margin:18px 0}.fitlab .fit-actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 10px}.fitlab button{border:1px solid #d8d0e4;border-radius:9px;background:#fff;color:#47365e;padding:10px 13px;font-family:inherit;font-size:14px;line-height:1.2;font-weight:600;cursor:pointer}.fitlab button:hover{border-color:var(--fit-purple);background:#f8f4ff}.fitlab button.fit-primary{background:var(--fit-purple);color:#fff;border-color:var(--fit-purple)}.fitlab button:disabled{opacity:.5;cursor:default}.fitlab button:focus-visible{outline:3px solid var(--fit-blue);outline-offset:3px}
+.fitlab .fit-disclosure{border-top:1px solid var(--fit-line);padding:15px 0 0;margin-top:18px}.fitlab .fit-disclosure>summary{cursor:pointer;font-size:15px;font-weight:650;color:#57368b;list-style-position:inside}.fitlab .fit-disclosure[open]>summary{margin-bottom:15px}.fitlab .fit-disclosure>summary:focus-visible{outline:3px solid var(--fit-blue);outline-offset:4px}.fitlab .fit-short-help{margin-top:8px;font-size:13px;color:#655e74}.fitlab .fit-separator{border:0;border-top:1px solid var(--fit-line);margin:18px 0}.fitlab .fit-actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 10px}.fitlab button{border:1px solid #d8d0e4;border-radius:9px;background:#fff;color:#47365e;padding:10px 13px;font-family:inherit;font-size:14px;line-height:1.2;font-weight:600;cursor:pointer}.fitlab button:hover{border-color:var(--fit-purple);background:#f8f4ff}.fitlab button.fit-primary{background:var(--fit-purple);color:#fff;border-color:var(--fit-purple)}.fitlab button:disabled{opacity:.5;cursor:default}.fitlab button:focus-visible{outline:3px solid var(--fit-blue);outline-offset:3px}
 .fitlab .fit-result{border-left:4px solid #d29b1f;padding:14px 15px;background:#fff9e9;border-radius:0 10px 10px 0;margin-top:16px}.fitlab .fit-result.is-fit{background:#effaf6;border-color:#29886a}.fitlab .fit-result.is-empty{background:#f4f1fb;border-color:#9878cb}.fitlab .fit-result strong{display:block;font-size:16px}.fitlab .fit-result ul{margin:8px 0 0;padding-left:20px;font-size:14px}.fitlab .fit-result .fit-caveat{margin-top:8px;font-size:13px}.fitlab .fit-manual{border:1px solid #e8d8aa;background:#fffbef;border-radius:12px;padding:14px;margin-bottom:16px}.fitlab .fit-editor[hidden]{display:none}.fitlab .fit-empty-edit{font-size:14px;color:#655e74;margin:6px 0}.fitlab .fit-announcement{margin:8px 0;font-size:14px;color:#655e74;min-height:20px}
 @media(max-width:760px){.fitlab .fit-layout{grid-template-columns:1fr}.fitlab .fit-plan{height:320px}.fitlab .fit-surface,.fitlab .fit-controls{padding:14px}.fitlab .fit-options{gap:10px}.fitlab .fit-actions button{flex:1 1 130px}}
 `;
@@ -67,30 +67,30 @@ export function mountFitChecker(container, { model: initialModel, onChange = () 
   root.className = 'fitlab';
   root.setAttribute('aria-label', 'Verificação das peças no chassi');
   root.innerHTML = `
-    <h3>As peças cabem?</h3>
-    <p class="fit-intro">Organize os componentes na área útil do chassi. Arraste as peças e ajuste as medidas do seu kit.</p>
-    <div class="fit-manual" hidden>
-      <h4>Área útil medida por você</h4>
-      <p>O tamanho externo do STL não garante espaço para as peças. Informe o retângulo livre de paredes, furos e obstáculos que você mediu.</p>
+    <h3>Teste o encaixe</h3>
+    <p class="fit-intro">Escolha as peças, organize e confira o resultado.</p>
+    <details class="fit-manual fit-disclosure" hidden>
+      <summary>Confirmar a área útil do STL</summary>
+      <p>Informe a área plana que você mediu, livre de paredes e obstáculos.</p>
       <div class="fit-fields"><label class="fit-field">Largura útil (mm)<input type="number" data-manual="width" min="1" max="1000" step="0.5"></label><label class="fit-field">Comprimento útil (mm)<input type="number" data-manual="length" min="1" max="1000" step="0.5"></label></div>
       <label class="fit-choice" style="margin-top:12px"><input type="checkbox" data-manual-confirm>Conferi essa área no modelo ou na peça impressa.</label>
-    </div>
+    </details>
     <div class="fit-layout">
       <div class="fit-surface">
         <h4>Vista de cima · <span data-model-name></span></h4>
         <svg class="fit-plan" tabindex="0" role="application" aria-label="Área de montagem. Arraste uma peça ou use as setas do teclado para movê-la."></svg>
         <div class="fit-legend"><span>Acima da base</span><span>Abaixo da base</span></div>
-        <small>Arraste para mover. As setas movem a peça selecionada em 1 mm; Shift + seta, em 5 mm. As coordenadas indicam o centro da peça.</small>
-        <div class="fit-actions"><button type="button" data-organize>Organizar peças</button><button type="button" data-reset>Redefinir</button><button type="button" data-check class="fit-primary">Verificar encaixe</button></div>
+        <small>Arraste as peças para mover. Use as setas do teclado para ajustar; Shift + seta move 5 mm.</small>
+        <div class="fit-actions"><button type="button" data-organize>Organizar peças</button><button type="button" data-reset>Recomeçar</button><button type="button" data-check class="fit-primary">Conferir encaixe</button></div>
         <div class="fit-announcement" role="status" aria-live="polite"></div>
         <div class="fit-result" role="status" aria-live="polite"></div>
       </div>
       <div class="fit-controls">
-        <h4>Escolha os componentes</h4>
+        <h4>Peças do seu robô</h4>
         <div class="fit-options" data-boards></div>
         <div class="fit-options" data-accessories></div>
-        <small>Confira suas medidas. Placas, baterias, rodas e suportes variam entre fabricantes. Os valores iniciais são referências para planejar a montagem.</small>
-        <hr class="fit-separator">
+        <small>As medidas iniciais são estimativas. Confira suas peças antes de imprimir.</small>
+        <details class="fit-disclosure" data-edit-details><summary>Ajustar medidas e posição</summary>
         <label class="fit-field">Peça selecionada<select data-active-part></select></label>
         <p class="fit-empty-edit" hidden>Selecione uma peça acima para ajustar suas dimensões.</p>
         <div class="fit-editor">
@@ -105,14 +105,16 @@ export function mountFitChecker(container, { model: initialModel, onChange = () 
           <div class="fit-actions"><button type="button" data-rotate>Girar 90°</button><span data-rotation style="align-self:center;font-size:14px"></span></div>
           <small data-part-note></small>
         </div>
-        <hr class="fit-separator">
-        <h4>Folgas da sua montagem</h4>
+        </details>
+        <details class="fit-disclosure" data-limit-details><summary>Ajustar folgas e alturas</summary>
+        <p class="fit-short-help">Referência inicial: 2 mm de folga e 40 mm de altura disponível por lado. Ajuste ao seu robô.</p>
         <div class="fit-fields">
           <label class="fit-field">Acima da base (mm)<input type="number" data-limit="top" value="40" min="0.5" max="1000" step="0.5"></label>
           <label class="fit-field">Abaixo da base (mm)<input type="number" data-limit="bottom" value="40" min="0.5" max="1000" step="0.5"></label>
           <label class="fit-field fit-wide">Distância mínima entre peças e bordas (mm)<input type="number" data-clearance value="2" min="0" max="30" step="0.5"></label>
         </div>
-        <small style="margin-top:10px">Alturas informadas por você, medidas a partir da face correspondente da base. Não representam uma tampa nem um vão já verificado.</small>
+        <small style="margin-top:10px">Meça a altura livre acima e abaixo da base. O programa não reconhece tampas nem a distância até o chão.</small>
+        </details>
       </div>
     </div>`;
   container.appendChild(root);
@@ -127,9 +129,11 @@ export function mountFitChecker(container, { model: initialModel, onChange = () 
   }
 
   function hasInvalidMeasurements() {
-    return [...root.querySelectorAll('input[type="number"]')].some(input =>
+    const invalid = [...root.querySelectorAll('input[type="number"]')].filter(input =>
       !input.disabled && !input.closest('.fit-editor[hidden], .fit-manual[hidden]') && !numericFieldValid(input)
     );
+    for (const input of invalid) { const detail = input.closest('details'); if (detail) detail.open = true; }
+    return invalid.length > 0;
   }
 
   function setAnnouncement(message) { $('.fit-announcement').textContent = message; }
@@ -317,6 +321,7 @@ export function mountFitChecker(container, { model: initialModel, onChange = () 
   function renderModelFields() {
     $('[data-model-name]').textContent = model.name || 'Chassi';
     $('.fit-manual').hidden = !model.manual;
+    $('.fit-manual').open = Boolean(model.manual && !manualConfirmed);
     const points = polygonPoints(model), xs = points.map(p => p[0]), ys = points.map(p => p[1]);
     $('[data-manual="width"]').value = Math.round((Math.max(...xs) - Math.min(...xs)) * 10) / 10;
     $('[data-manual="length"]').value = Math.round((Math.max(...ys) - Math.min(...ys)) * 10) / 10;
