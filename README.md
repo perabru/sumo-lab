@@ -35,4 +35,14 @@ As verificações C++ realizadas usam uma API Arduino simulada. Não substituem 
 
 ## Créditos
 
-Conteúdo e diagramas didáticos próprios; fontes técnicas na seção do site. Referências Uiverse citadas em [CREDITS.md](CREDITS.md). Modelos Thingiverse não foram copiados nem redistribuídos. O STL próprio é um estudo de bandeja100×100×12mm sem furação; exige adaptação ao hardware e regulamento antes da impressão.
+Conteúdo e diagramas didáticos próprios; fontes técnicas na seção do site. Referências Uiverse citadas em [CREDITS.md](CREDITS.md). Modelos Thingiverse não foram copiados nem redistribuídos. Há cinco chassis didáticos próprios para download: compacto, clássico, com rampa, perfil baixo e ampliado. Todos exigem conferência das peças reais, fixações e regulamento antes da impressão. A versão antiga da bandeja é mantida apenas para compatibilidade.
+
+## Chassis e verificação de espaço
+
+A seção `#chassis` usa Three.js local para exibir os cinco modelos, componentes, vistas e camadas separadas. Cada STL próprio é gerado pela mesma geometria mostrada no visualizador. Os furos e rasgos são genéricos, sem promessa de compatibilidade com placas ou motores específicos.
+
+O verificador usa as medidas editáveis das peças, rotação, folga, altura disponível e uma área útil conservadora. Peças acima e abaixo da base são verificadas em planos separados. O resultado é uma análise de espaço: não simula resistência, cabos, conectores, suportes, acesso a parafusos, rodas ou coincidência de furos. Inclua esses volumes nas medidas e confira a montagem física. Os valores iniciais são referências; fornecedores podem usar dimensões diferentes.
+
+STLs externos são abertos localmente e exigem que o aluno informe uma área plana útil. O sistema não deduz essa área a partir da caixa externa nem reconhece obstáculos da malha. Formato esperado: milímetros, base horizontal voltada para cima, até16MB e80mil triângulos.
+
+Testes geométricos verificam limites, superfície fechada, furos, rampa, colisões, rotações, entradas inválidas e preservação de medidas na organização.

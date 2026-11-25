@@ -14,3 +14,7 @@ Referência complementar de ensino da ponte H: Gustavo Nery / Eletrogate, https:
 Fontes de especificações: Arduino, Espressif, STMicroelectronics, Toshiba, Pololu, Vishay, SparkFun e DFRobot. Consulte `content.js` para links completos. Logos, imagens e arquivos proprietários de fabricantes não foram redistribuídos. Os desenhos SVG são autorais e não representam endosso de fabricantes.
 
 Os sete links Thingiverse enviados foram preservados em `chassis.js`. Autoria e licença de cada download devem ser verificadas na página original. Os títulos e nomes não confirmados não foram inventados.
+
+Os cinco chassis, geometrias dos componentes e verificador de espaço são didáticos e autorais. Dimensões da placa Uno R3: Arduino (68,6 ×53,4mm); demais envelopes iniciais são estimativas editáveis. Os detalhes visuais não são modelos CAD oficiais.
+
+Renderização3D: Three.js r187, copyright dos autores Three.js, licença MIT. Distribuição local em `vendor/three/`; texto integral em `vendor/three/LICENSE`. https://threejs.org/

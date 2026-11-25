@@ -1,0 +1,517 @@
+{
+  "units": "mm",
+  "front": "negativeY",
+  "origin": "centerXY_bottomZ",
+  "models": [
+    {
+      "id": "compacto-100",
+      "name": "Compacto 100",
+      "subtitle": "Base compacta com frente aberta",
+      "width": 100,
+      "length": 100,
+      "height": 12,
+      "usablePolygon": [
+        [
+          -44,
+          -47
+        ],
+        [
+          44,
+          -47
+        ],
+        [
+          44,
+          44
+        ],
+        [
+          -44,
+          44
+        ]
+      ],
+      "baseThickness": 3,
+      "maxComponentHeight": 30,
+      "holes": [
+        {
+          "x": -22,
+          "y": -22,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 22,
+          "y": -22,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -22,
+          "y": 22,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 22,
+          "y": 22,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -38,
+          "y": 0,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 38,
+          "y": 0,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        }
+      ],
+      "features": [
+        "Piso de 3 mm e paredes laterais de 3 mm",
+        "Quatro furos quadrados de 4 mm",
+        "Duas passagens de 6 × 16 mm para abraçadeiras",
+        "Nervuras internas reforçam as laterais"
+      ],
+      "download": "./assets/chassis/compacto-100.stl",
+      "note": "Furação genérica: meça as peças e adapte a fixação, as folgas e as regras da categoria antes de imprimir."
+    },
+    {
+      "id": "classico-120",
+      "name": "Clássico 120",
+      "subtitle": "Mais espaço para distribuir a eletrônica",
+      "width": 120,
+      "length": 140,
+      "height": 14,
+      "usablePolygon": [
+        [
+          -54,
+          -67
+        ],
+        [
+          54,
+          -67
+        ],
+        [
+          54,
+          64
+        ],
+        [
+          -54,
+          64
+        ]
+      ],
+      "baseThickness": 3,
+      "maxComponentHeight": 30,
+      "holes": [
+        {
+          "x": -25,
+          "y": -35,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 25,
+          "y": -35,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -25,
+          "y": 35,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 25,
+          "y": 35,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -48,
+          "y": -25,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 48,
+          "y": -25,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": -48,
+          "y": 25,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 48,
+          "y": 25,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        }
+      ],
+      "features": [
+        "Piso de 3 mm e laterais de 14 mm de altura",
+        "Borda frontal baixa de 6 mm",
+        "Quatro passagens para abraçadeiras",
+        "Reforços laterais integrados ao piso"
+      ],
+      "download": "./assets/chassis/classico-120.stl",
+      "note": "Furação genérica: meça as peças e adapte a fixação, as folgas e as regras da categoria antes de imprimir."
+    },
+    {
+      "id": "cunha-150",
+      "name": "Cunha 150",
+      "subtitle": "Rampa frontal integrada à base",
+      "width": 120,
+      "length": 150,
+      "height": 14,
+      "usablePolygon": [
+        [
+          -54,
+          -57
+        ],
+        [
+          54,
+          -57
+        ],
+        [
+          54,
+          69
+        ],
+        [
+          -54,
+          69
+        ]
+      ],
+      "baseThickness": 3,
+      "maxComponentHeight": 30,
+      "holes": [
+        {
+          "x": -25,
+          "y": -25,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 25,
+          "y": -25,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -25,
+          "y": 35,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 25,
+          "y": 35,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -48,
+          "y": -20,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 48,
+          "y": -20,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": -48,
+          "y": 30,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 48,
+          "y": 30,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        }
+      ],
+      "features": [
+        "Rampa frontal de 15 mm, fora da área útil",
+        "Espessura da rampa cresce de 0,8 a 3 mm",
+        "Laterais reforçadas e traseira de 14 mm",
+        "Quatro furos de fixação e quatro passagens para abraçadeiras"
+      ],
+      "download": "./assets/chassis/cunha-150.stl",
+      "note": "Furação genérica: meça as peças e adapte a fixação, as folgas e as regras da categoria antes de imprimir."
+    },
+    {
+      "id": "perfil-baixo-120",
+      "name": "Perfil baixo 120",
+      "subtitle": "Centro de massa próximo ao piso",
+      "width": 120,
+      "length": 120,
+      "height": 8,
+      "usablePolygon": [
+        [
+          -54,
+          -57
+        ],
+        [
+          54,
+          -57
+        ],
+        [
+          54,
+          54
+        ],
+        [
+          -54,
+          54
+        ]
+      ],
+      "baseThickness": 3,
+      "maxComponentHeight": 30,
+      "holes": [
+        {
+          "x": -24,
+          "y": -24,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 24,
+          "y": -24,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -24,
+          "y": 24,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 24,
+          "y": 24,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -48,
+          "y": 0,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 48,
+          "y": 0,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        }
+      ],
+      "features": [
+        "Altura externa de 8 mm e piso de 3 mm",
+        "Frente aberta e recorte traseiro para cabos",
+        "Quatro furos quadrados de 4 mm",
+        "Nervuras baixas nas paredes laterais"
+      ],
+      "download": "./assets/chassis/perfil-baixo-120.stl",
+      "note": "Furação genérica: meça as peças e adapte a fixação, as folgas e as regras da categoria antes de imprimir."
+    },
+    {
+      "id": "expandido-180",
+      "name": "Expandido 180",
+      "subtitle": "Área ampliada para experimentos",
+      "width": 160,
+      "length": 180,
+      "height": 16,
+      "usablePolygon": [
+        [
+          -74,
+          -87
+        ],
+        [
+          74,
+          -87
+        ],
+        [
+          74,
+          84
+        ],
+        [
+          -74,
+          84
+        ]
+      ],
+      "baseThickness": 3,
+      "maxComponentHeight": 30,
+      "holes": [
+        {
+          "x": -30,
+          "y": -40,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 30,
+          "y": -40,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -30,
+          "y": 40,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 30,
+          "y": 40,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -52,
+          "y": 0,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": 52,
+          "y": 0,
+          "width": 4,
+          "length": 4,
+          "type": "mount",
+          "label": "Furo quadrado de fixação · 4 × 4 mm"
+        },
+        {
+          "x": -68,
+          "y": -45,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 68,
+          "y": -45,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": -68,
+          "y": 0,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 68,
+          "y": 0,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": -68,
+          "y": 45,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        },
+        {
+          "x": 68,
+          "y": 45,
+          "width": 6,
+          "length": 16,
+          "type": "strap",
+          "label": "Passagem para abraçadeira · 6 × 16 mm"
+        }
+      ],
+      "features": [
+        "Piso de 3 mm e paredes de até 16 mm",
+        "Seis furos de fixação e seis passagens para abraçadeiras",
+        "Seis nervuras laterais reforçam a estrutura",
+        "Recorte traseiro de 24 mm para passagem de cabos"
+      ],
+      "download": "./assets/chassis/expandido-180.stl",
+      "note": "Furação genérica: meça as peças e adapte a fixação, as folgas e as regras da categoria antes de imprimir."
+    }
+  ]
+}
